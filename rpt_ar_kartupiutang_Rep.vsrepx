@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.3.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rpt_ar_kartupiutang_SDT" Margins="22, 15, 0, 100" PageWidth="850" PageHeight="1100" Version="21.1" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="1" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="3" Name="contract_no" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="4" Name="PPN_DataKontrak" DataMember="rpt_ar_kartupiutang_DataKontrak" />
+    <Item2 Ref="5" Name="calculatedField1" Expression="Sum([Jumlah_Bersih]) - Sum([Jumlah Inc PPN])" DataMember="rpt_ar_kartupiutang" />
+    <Item3 Ref="6" Name="calculatedField2" DataMember="Query" />
+    <Item4 Ref="7" Name="calculatedField3" DataMember="rpt_ar_kartupiutang" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="8" ControlType="TopMarginBand" Name="TopMargin" HeightF="0" />
+    <Item2 Ref="9" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="10" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="0" />
+    <Item4 Ref="11" ControlType="PageHeaderBand" Name="PageHeader" Expanded="false" HeightF="0" />
+    <Item5 Ref="12" ControlType="GroupHeaderBand" Name="GroupHeader1" Expanded="false" HeightF="51.0804062">
+      <Controls>
+        <Item1 Ref="13" ControlType="XRLabel" Name="xrLabel1" Text="Kartu Piutang" TextAlignment="TopCenter" SizeF="782.9999,23" LocationFloat="0,10" Font="Arial Narrow, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 Ref="16" ControlType="DetailReportBand" Name="DetailReport" Level="3" FilterString="[status] = 1" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-15">
+      <Bands>
+        <Item1 Ref="17" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <Controls>
+            <Item1 Ref="18" ControlType="XRTable" Name="table6" SizeF="787,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="19" ControlType="XRTableRow" Name="tableRow22" Weight="1">
+                  <Cells>
+                    <Item1 Ref="20" ControlType="XRTableCell" Name="tableCell66" Weight="0.83397190185892389" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[TERMYNKE]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="23" ControlType="XRTableCell" Name="tableCell67" Weight="1.0467682715676019" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="[Tanggal_Bap]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="25" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="26" ControlType="XRTableCell" Name="tableCell68" Weight="0.45047147341281546" TextFormatString="{0:}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[%]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="29" ControlType="XRTableCell" Name="tableCell69" Weight="1.4302697136155051" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="[KARYAYDF]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="31" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="32" ControlType="XRTableCell" Name="tableCell70" Weight="1.1940453509162934" Multiline="true" Text="[Potongan_UM_C]" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="33" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_UM]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="34" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="35" ControlType="XRTableCell" Name="tableCell71" Weight="1.04447328862886" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="36" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_Ret]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="37" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="38" ControlType="XRTableCell" Name="tableCell72" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="39" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Bersih]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="41" ControlType="XRTableCell" Name="tableCell73" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="42" EventName="BeforePrint" PropertyName="Text" Expression="[PPN_2005]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="43" UseFont="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="44" ControlType="XRTableCell" Name="tableCell74" Weight="1.1950099471272424" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="45" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah Inc PPN]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="46" UseFont="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="47" ControlType="XRTableCell" Name="tableCell75" Weight="1.2638347781357289" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[PPH_Final]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="50" ControlType="XRTableCell" Name="tableCell76" Weight="1.3532718469031313" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="51" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah Di Terima PPN &amp; PPH]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="52" UseFont="false" UseTextAlignment="false" />
+                    </Item11>
+                    <Item12 Ref="53" ControlType="XRTableCell" Name="tableCell77" Weight="1.187882498925064" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="54" UseFont="false" UseTextAlignment="false" />
+                    </Item12>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="55" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="56" ControlType="ReportHeaderBand" Name="ReportHeader1" HeightF="126.928505">
+          <Controls>
+            <Item1 Ref="57" ControlType="XRTable" Name="table5" SizeF="787,112.037041" LocationFloat="3.17891427E-05,14.8914623" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="58" ControlType="XRTableRow" Name="tableRow17" Weight="1">
+                  <Cells>
+                    <Item1 Ref="59" ControlType="XRTableCell" Name="tableCell165" Weight="13.000000084446258" Multiline="true" Text="B.BERITA ACARA TAGIHAN TERMYN" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="LightGray">
+                      <StylePriority Ref="60" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="61" ControlType="XRTableRow" Name="tableRow30" Weight="1">
+                  <Cells>
+                    <Item1 Ref="62" ControlType="XRTableCell" Name="tableCell128" Weight="0.8339722185323899" RowSpan="2" Multiline="true" Text="Termin Ke&#xD;&#xA;" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="63" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="64" ControlType="XRTableCell" Name="tableCell139" Weight="1.0467681191190092" RowSpan="2" Multiline="true" Text="Tgl BAP" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="65" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="66" ControlType="XRTableCell" Name="tableCell140" Weight="0.45047118659529517" RowSpan="2" Multiline="true" Text="%" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="67" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="68" ControlType="XRTableCell" Name="tableCell141" Weight="1.4302690649466736" RowSpan="2" Multiline="true" Text="Karya YDF" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="69" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="70" ControlType="XRTableCell" Name="tableCell142" Weight="1.1940462447366389" RowSpan="2" Multiline="true" Text="Potongan UM 20%" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="71" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="72" ControlType="XRTableCell" Name="tableCell143" Weight="1.0444731660699929" RowSpan="2" Multiline="true" Text="Potongan Retensi" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="73" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="74" ControlType="XRTableCell" Name="tableCell144" Weight="1" RowSpan="2" Multiline="true" Text="Jumlah Bersih" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="75" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="76" ControlType="XRTableCell" Name="tableCell145" Weight="1" RowSpan="2" Multiline="true" Text="PPN" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="77" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="78" ControlType="XRTableCell" Name="tableCell146" Weight="1.1950098363027677" RowSpan="2" Multiline="true" Text="Jumlah Inc PPN" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="79" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="80" ControlType="XRTableCell" Name="tableCell147" Weight="1.2638350507529097" RowSpan="2" Multiline="true" Text="PPH Final" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="81" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="82" ControlType="XRTableCell" Name="tableCell148" Weight="1.3532737648244757" RowSpan="2" Multiline="true" Text="Jumlah Di Terima" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="83" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item11>
+                    <Item12 Ref="84" ControlType="XRTableCell" Name="tableCell149" Weight="1.1878814325661045" RowSpan="2" Multiline="true" Text="KET. Cair/Tanggal" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="85" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item12>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="86" ControlType="XRTableRow" Name="tableRow31" Weight="1">
+                  <Cells>
+                    <Item1 Ref="87" ControlType="XRTableCell" Name="tableCell150" Weight="0.8339722185323899" Multiline="true" Text="tableCell150" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="88" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="89" ControlType="XRTableCell" Name="tableCell151" Weight="1.0467681191190092" Multiline="true" Text="tableCell151" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="90" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="91" ControlType="XRTableCell" Name="tableCell152" Weight="0.45047118659529517" Multiline="true" Text="tableCell152" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="92" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="93" ControlType="XRTableCell" Name="tableCell153" Weight="1.4302690649466736" Multiline="true" Text="tableCell153" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="94" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="95" ControlType="XRTableCell" Name="tableCell154" Weight="1.1940462447366389" Multiline="true" Text="tableCell154" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="96" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="97" ControlType="XRTableCell" Name="tableCell155" Weight="1.0444731660699929" Multiline="true" Text="tableCell155" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="98" UseBackColor="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="99" ControlType="XRTableCell" Name="tableCell156" Weight="1" Multiline="true" Text="tableCell156" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="100" UseBackColor="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="101" ControlType="XRTableCell" Name="tableCell157" Weight="1" Multiline="true" Text="tableCell157" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="102" UseBackColor="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="103" ControlType="XRTableCell" Name="tableCell158" Weight="1.1950098363027677" Multiline="true" Text="tableCell158" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="104" UseBackColor="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="105" ControlType="XRTableCell" Name="tableCell159" Weight="1.2638350507529097" Multiline="true" Text="tableCell159" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="106" UseBackColor="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="107" ControlType="XRTableCell" Name="tableCell160" Weight="1.3532737648244757" Multiline="true" Text="tableCell160" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="108" UseBackColor="false" UseTextAlignment="false" />
+                    </Item11>
+                    <Item12 Ref="109" ControlType="XRTableCell" Name="tableCell161" Weight="1.1878814325661045" Multiline="true" Text="tableCell161" TextAlignment="MiddleCenter" BackColor="DarkOrange">
+                      <StylePriority Ref="110" UseBackColor="false" UseTextAlignment="false" />
+                    </Item12>
+                  </Cells>
+                </Item3>
+                <Item4 Ref="111" ControlType="XRTableRow" Name="tableRow21" Weight="1">
+                  <Cells>
+                    <Item1 Ref="112" ControlType="XRTableCell" Name="tableCell65" Weight="13.000000084446258" Multiline="true" Text="A.Termyn Sudah Cair" TextAlignment="MiddleCenter" ForeColor="Red" BackColor="Transparent">
+                      <StylePriority Ref="113" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item4>
+              </Rows>
+              <StylePriority Ref="114" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="115" ControlType="GroupFooterBand" Name="GroupFooter2" HeightF="25.3092957">
+          <Controls>
+            <Item1 Ref="116" ControlType="XRTable" Name="table11" SizeF="786.9999,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="117" ControlType="XRTableRow" Name="tableRow28" Weight="1">
+                  <Cells>
+                    <Item1 Ref="118" ControlType="XRTableCell" Name="tableCell92" Weight="1.8807408399120997" Multiline="true" Text="Jumlah" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="119" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="120" ControlType="XRTableCell" Name="tableCell94" Weight="0.45047109502800764" TextFormatString="{0:}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="121" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="122" ControlType="XRTableCell" Name="tableCell95" Weight="1.430269935866052" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="123" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([KARYAYDF])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="124" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="125" ControlType="XRTableCell" Name="tableCell96" Weight="1.1940449168751131" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Potongan_UM])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="127" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="128" ControlType="XRTableCell" Name="tableCell97" Weight="1.0444716518562254" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="129" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Potongan_Ret])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="130" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="131" ControlType="XRTableCell" Name="tableCell105" Weight="1.0000027725625877" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="132" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Jumlah_Bersih])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="133" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="134" ControlType="XRTableCell" Name="tableCell106" Weight="0.99999823564198964" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([PPN_2005])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="136" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="137" ControlType="XRTableCell" Name="tableCell107" Weight="1.1950112142225131" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="138" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Jumlah Inc PPN])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="139" UseFont="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="140" ControlType="XRTableCell" Name="tableCell108" Weight="1.2638348504019454" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="141" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([PPH_Final])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="142" UseFont="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="143" ControlType="XRTableCell" Name="tableCell109" Weight="1.3532716072422273" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="144" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Jumlah Di Terima PPN &amp; PPH])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="145" UseFont="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="146" ControlType="XRTableCell" Name="tableCell110" Weight="1.1878803910199034" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="147" UseFont="false" UseTextAlignment="false" />
+                    </Item11>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="148" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item6>
+    <Item7 Ref="149" ControlType="DetailReportBand" Name="DetailReport1" Level="4" FilterString="[status] = 0" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-15">
+      <Bands>
+        <Item1 Ref="150" ControlType="DetailBand" Name="Detail2" HeightF="25">
+          <Controls>
+            <Item1 Ref="151" ControlType="XRTable" Name="table4" SizeF="787,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="152" ControlType="XRTableRow" Name="tableRow23" Weight="1">
+                  <Cells>
+                    <Item1 Ref="153" ControlType="XRTableCell" Name="tableCell78" Weight="0.83397190185892389" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="154" EventName="BeforePrint" PropertyName="Text" Expression="[TERMYNKE]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="155" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="156" ControlType="XRTableCell" Name="tableCell79" Weight="1.0467686496443052" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="157" EventName="BeforePrint" PropertyName="Text" Expression="[Tanggal_Bap]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="158" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="159" ControlType="XRTableCell" Name="tableCell80" Weight="0.4504714734128154" TextFormatString="{0:}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="160" EventName="BeforePrint" PropertyName="Text" Expression="[%]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="161" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="162" ControlType="XRTableCell" Name="tableCell81" Weight="1.4302695875899376" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="163" EventName="BeforePrint" PropertyName="Text" Expression="[KARYAYDF]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="164" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="165" ControlType="XRTableCell" Name="tableCell82" Weight="1.1940453509162934" Multiline="true" Text="[Potongan_UM_C]" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="166" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_UM]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="167" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="168" ControlType="XRTableCell" Name="tableCell83" Weight="1.0444730365777244" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="169" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_Ret]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="170" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="171" ControlType="XRTableCell" Name="tableCell84" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="172" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Bersih]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="173" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="174" ControlType="XRTableCell" Name="tableCell85" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="175" EventName="BeforePrint" PropertyName="Text" Expression="[PPN_2005]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="176" UseFont="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="177" ControlType="XRTableCell" Name="tableCell86" Weight="1.1950099471272424" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="178" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah Inc PPN]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="179" UseFont="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="180" ControlType="XRTableCell" Name="tableCell87" Weight="1.2638347781357289" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="181" EventName="BeforePrint" PropertyName="Text" Expression="[PPH_Final]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="182" UseFont="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="183" ControlType="XRTableCell" Name="tableCell88" Weight="1.3532698304940474" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="184" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah Di Terima PPN &amp; PPH]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="185" UseFont="false" UseTextAlignment="false" />
+                    </Item11>
+                    <Item12 Ref="186" ControlType="XRTableCell" Name="tableCell89" Weight="1.187884515334148" Multiline="true" TextAlignment="MiddleCenter">
+                      <StylePriority Ref="187" UseTextAlignment="false" />
+                    </Item12>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="188" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="189" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="25">
+          <Controls>
+            <Item1 Ref="190" ControlType="XRTable" Name="table7" SizeF="787,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="191" ControlType="XRTableRow" Name="tableRow26" Weight="1">
+                  <Cells>
+                    <Item1 Ref="192" ControlType="XRTableCell" Name="tableCell114" Weight="13.000000084446258" Multiline="true" Text="B.Termyn Belum Cair" TextAlignment="MiddleCenter" ForeColor="Red" BackColor="Transparent" Borders="All">
+                      <StylePriority Ref="193" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="194" ControlType="ReportFooterBand" Name="ReportFooter1" HeightF="25">
+          <Controls>
+            <Item1 Ref="195" ControlType="XRTable" Name="table12" SizeF="786.9999,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="196" ControlType="XRTableRow" Name="tableRow29" Weight="1">
+                  <Cells>
+                    <Item1 Ref="197" ControlType="XRTableCell" Name="tableCell93" Weight="1.8807408084057069" Multiline="true" Text="Jumlah" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="198" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="199" ControlType="XRTableCell" Name="tableCell111" Weight="0.45047112653440052" TextFormatString="{0:}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="200" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="201" ControlType="XRTableCell" Name="tableCell112" Weight="1.4302694947765493" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <Summary Ref="202" Running="Group" />
+                      <ExpressionBindings>
+                        <Item1 Ref="203" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([KARYAYDF])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="204" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="205" ControlType="XRTableCell" Name="tableCell113" Weight="1.1940457990541185" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="206" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Potongan_UM])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="207" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="208" ControlType="XRTableCell" Name="tableCell115" Weight="1.0444712107667227" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="209" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([Potongan_Ret])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="210" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="211" ControlType="XRTableCell" Name="tableCell116" Weight="1.0000027725625877" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([Jumlah_Bersih])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="213" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="214" ControlType="XRTableCell" Name="tableCell117" Weight="0.99999823564198964" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="215" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([PPN_2005])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="216" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="217" ControlType="XRTableCell" Name="tableCell118" Weight="1.1950097649284333" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="218" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([Jumlah Inc PPN])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="219" UseFont="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="220" ControlType="XRTableCell" Name="tableCell119" Weight="1.2638362366832392" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="221" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==0,true ,false )].sum([PPH_Final])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="222" UseFont="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="223" ControlType="XRTableCell" Name="tableCell120" Weight="1.3532716702550134" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="224" EventName="BeforePrint" PropertyName="Text" Expression="[][Iif([status]==1,true ,false )].sum([Jumlah Di Terima PPN &amp; PPH])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="225" UseFont="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="226" ControlType="XRTableCell" Name="tableCell121" Weight="1.1878803910199034" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="227" UseFont="false" UseTextAlignment="false" />
+                    </Item11>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="228" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item7>
+    <Item8 Ref="230" ControlType="DetailReportBand" Name="DetailReport2" Level="1" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-229">
+      <Bands>
+        <Item1 Ref="231" ControlType="DetailBand" Name="Detail3" HeightF="24.9999981">
+          <Controls>
+            <Item1 Ref="232" ControlType="XRTable" Name="table8" SizeF="797.0001,24.9999981" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="233" ControlType="XRTableRow" Name="tableRow27" Weight="1">
+                  <Cells>
+                    <Item1 Ref="234" ControlType="XRTableCell" Name="tableCell98" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="235" EventName="BeforePrint" PropertyName="Text" Expression="[Uraian]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="236" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="237" ControlType="XRTableCell" Name="tableCell99" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="238" EventName="BeforePrint" PropertyName="Text" Expression="[contract_no]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="239" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="240" ControlType="XRTableCell" Name="tableCell100" Weight="1" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="241" EventName="BeforePrint" PropertyName="Text" Expression="[start_dt]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="242" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="243" ControlType="XRTableCell" Name="tableCell101" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="244" EventName="BeforePrint" PropertyName="Text" Expression="[contract_amt]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="245" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="246" ControlType="XRTableCell" Name="tableCell102" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="247" EventName="BeforePrint" PropertyName="Text" Expression="[PPN]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="248" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="249" ControlType="XRTableCell" Name="tableCell103" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="250" EventName="BeforePrint" PropertyName="Text" Expression="[NK_PPN]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="251" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="252" ControlType="XRTableCell" Name="tableCell104" Weight="1" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="253" EventName="BeforePrint" PropertyName="Text" Expression="[Cara_Pembayaran]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="254" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="255" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="256" ControlType="ReportHeaderBand" Name="ReportHeader2" HeightF="51.0030136">
+          <Controls>
+            <Item1 Ref="257" ControlType="XRTable" Name="table2" SizeF="797.0001,49.99999" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="258" ControlType="XRTableRow" Name="tableRow7" Weight="1">
+                  <Cells>
+                    <Item1 Ref="259" ControlType="XRTableCell" Name="tableCell23" Weight="7" Multiline="true" Text="Data Kontrak" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" BackColor="LightGray">
+                      <StylePriority Ref="260" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="261" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                  <Cells>
+                    <Item1 Ref="262" ControlType="XRTableCell" Name="tableCell16" Weight="1" Multiline="true" Text="Uraian" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="263" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="264" ControlType="XRTableCell" Name="tableCell17" Weight="1" Multiline="true" TextTrimming="Word" Text="Nomor" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="265" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="266" ControlType="XRTableCell" Name="tableCell18" Weight="1" Multiline="true" Text="Tanggal" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="267" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="268" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="NK-PPN" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="269" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="270" ControlType="XRTableCell" Name="tableCell20" Weight="1" Multiline="true" Text="PPN 10%" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="271" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="272" ControlType="XRTableCell" Name="tableCell21" Weight="1" Multiline="true" Text="NK + PPN" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="273" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="274" ControlType="XRTableCell" Name="tableCell22" Weight="1" Multiline="true" Text="Cara Pembayaran" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="Orange">
+                      <StylePriority Ref="275" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item2>
+              </Rows>
+              <StylePriority Ref="276" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="277" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="25.4476757">
+          <Controls>
+            <Item1 Ref="278" ControlType="XRTable" Name="table15" SizeF="797,24.9999962" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="279" ControlType="XRTableRow" Name="tableRow16" Weight="1">
+                  <Cells>
+                    <Item1 Ref="280" ControlType="XRTableCell" Name="tableCell50" Weight="3.8266481041568157" Multiline="true" Text="Jumlah" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="281" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="282" ControlType="XRTableCell" Name="tableCell51" Weight="1.2755495925249143" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="283" EventName="BeforePrint" PropertyName="Text" Expression="Sum([contract_amt])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="284" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="285" ControlType="XRTableCell" Name="tableCell52" Weight="1.2755495826844947" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="286" EventName="BeforePrint" PropertyName="Text" Expression="Sum([PPN])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="287" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="288" ControlType="XRTableCell" Name="tableCell53" Weight="1.2755502301239083" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="289" EventName="BeforePrint" PropertyName="Text" Expression="Sum([NK_PPN])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="290" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="291" ControlType="XRTableCell" Name="tableCell54" Weight="1.2755467257466306" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="292" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="293" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item8>
+    <Item9 Ref="295" ControlType="DetailReportBand" Name="DetailReport3" Level="2" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-294">
+      <Bands>
+        <Item1 Ref="296" ControlType="DetailBand" Name="Detail4" HeightF="25">
+          <Controls>
+            <Item1 Ref="297" ControlType="XRTable" Name="table10" SizeF="300,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="298" ControlType="XRTableRow" Name="tableRow25" Weight="1">
+                  <Cells>
+                    <Item1 Ref="299" ControlType="XRTableCell" Name="tableCell30" Weight="1" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" Text="tableCell30" TextAlignment="MiddleCenter" Font="Arial, 8pt" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="300" EventName="BeforePrint" PropertyName="Text" Expression="[progress_date]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="301" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="302" ControlType="XRTableCell" Name="tableCell90" Weight="1" Multiline="true" Text="tableCell90" TextAlignment="MiddleCenter" Font="Arial, 8pt" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="303" EventName="BeforePrint" PropertyName="Text" Expression="[contract_amt]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="304" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="305" ControlType="XRTableCell" Name="tableCell91" Weight="1" Multiline="true" Text="tableCell91" TextAlignment="MiddleCenter" Font="Arial, 8pt" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="306" EventName="BeforePrint" PropertyName="Text" Expression="[Akumulasi]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="307" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="308" ControlType="ReportHeaderBand" Name="ReportHeader3" HeightF="83.41242">
+          <Controls>
+            <Item1 Ref="309" ControlType="XRTable" Name="table9" SizeF="300,57.17697" LocationFloat="0,26.0343761" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="310" ControlType="XRTableRow" Name="tableRow33" Weight="1">
+                  <Cells>
+                    <Item1 Ref="311" ControlType="XRTableCell" Name="tableCell124" Weight="3" Multiline="true" Text="A.Project Progress/Penjualan" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="LightGray" Borders="All">
+                      <StylePriority Ref="312" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="313" ControlType="XRTableRow" Name="tableRow8" Weight="1">
+                  <Cells>
+                    <Item1 Ref="314" ControlType="XRTableCell" Name="tableCell24" Weight="1" RowSpan="2" Multiline="true" Text="Progress Date" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                      <StylePriority Ref="315" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="316" ControlType="XRTableCell" Name="tableCell25" Weight="1" RowSpan="2" Multiline="true" Text="Nilai" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                      <StylePriority Ref="317" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="318" ControlType="XRTableCell" Name="tableCell26" Weight="1" RowSpan="2" Multiline="true" Text="Akumulasi" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                      <StylePriority Ref="319" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="320" ControlType="XRTableRow" Name="tableRow24" Weight="1">
+                  <Cells>
+                    <Item1 Ref="321" ControlType="XRTableCell" Name="tableCell27" Weight="1" Multiline="true" Text="tableCell27" />
+                    <Item2 Ref="322" ControlType="XRTableCell" Name="tableCell28" Weight="1" Multiline="true" Text="tableCell28" />
+                    <Item3 Ref="323" ControlType="XRTableCell" Name="tableCell29" Weight="1" Multiline="true" Text="tableCell29" />
+                  </Cells>
+                </Item3>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="324" ControlType="ReportFooterBand" Name="ReportFooter2" HeightF="26.8451481">
+          <Controls>
+            <Item1 Ref="325" ControlType="XRTable" Name="table13" SizeF="300,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="326" ControlType="XRTableRow" Name="tableRow32" Weight="1">
+                  <Cells>
+                    <Item1 Ref="327" ControlType="XRTableCell" Name="tableCell122" Weight="1" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" Text="Jumlah" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                      <StylePriority Ref="328" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="329" ControlType="XRTableCell" Name="tableCell123" Weight="2" Multiline="true" Text="tableCell90" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="330" EventName="BeforePrint" PropertyName="Text" Expression="Sum([contract_amt])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="331" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item9>
+    <Item10 Ref="333" ControlType="DetailReportBand" Name="DetailReport4" Level="5" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-332">
+      <Bands>
+        <Item1 Ref="334" ControlType="DetailBand" Name="Detail5" Expanded="false" HeightF="0" />
+        <Item2 Ref="335" ControlType="GroupHeaderBand" Name="GroupHeader3" HeightF="369.810242">
+          <SortingSummary Ref="336" Enabled="true" FieldName="status" />
+          <Controls>
+            <Item1 Ref="337" ControlType="XRTable" Name="table14" SizeF="786.9999,50" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="338" ControlType="XRTableRow" Name="tableRow37" Weight="1">
+                  <Cells>
+                    <Item1 Ref="339" ControlType="XRTableCell" Name="tableCell176" Weight="12.999997510628665" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt" BackColor="LightGray">
+                      <StylePriority Ref="340" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="341" ControlType="XRTableRow" Name="tableRow18" Weight="1">
+                  <Cells>
+                    <Item1 Ref="342" ControlType="XRTableCell" Name="tableCell55" Weight="1.8807408084057069" Multiline="true" Text="Jumlah A+ B" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="343" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="344" ControlType="XRTableCell" Name="tableCell56" Weight="0.45047109502800747" TextFormatString="{0:}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="345" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="346" ControlType="XRTableCell" Name="tableCell57" Weight="1.4302697783340868" TextFormatString="{0:#,#}" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="347" EventName="BeforePrint" PropertyName="Text" Expression="[KaryaYDF_Cair] + [KaryaYDF_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="348" UseFont="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="349" ControlType="XRTableCell" Name="tableCell58" Weight="1.1940450429006853" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="350" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_UM_Cair] + [Potongan_UM_Noncair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="351" UseFont="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="352" ControlType="XRTableCell" Name="tableCell135" Weight="1.0444717148690115" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="353" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_Retensi_Cair] + [Potongan_Retensi_Noncair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="354" UseFont="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="355" ControlType="XRTableCell" Name="tableCell136" Weight="1.0000027725625877" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="356" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Bersih_Cair] + [Jumlah_Bersih_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="357" UseFont="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="358" ControlType="XRTableCell" Name="tableCell137" Weight="0.99999823564198964" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="359" EventName="BeforePrint" PropertyName="Text" Expression="[PPN_Final_Cair] + [PPN_Final_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="360" UseFont="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="361" ControlType="XRTableCell" Name="tableCell138" Weight="1.1950097649284333" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="362" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_IncFinal_Cair] + [Jumlah_IncFinal_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="363" UseFont="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="364" ControlType="XRTableCell" Name="tableCell162" Weight="1.2638362996960253" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="365" EventName="BeforePrint" PropertyName="Text" Expression="[PPH_Final_Cair] + [PPH_Final_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="366" UseFont="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="367" ControlType="XRTableCell" Name="tableCell163" Weight="1.3532716072422273" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="368" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Diterima_Cair] + [Jumlah_Diterima_NonCair]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="369" UseFont="false" UseTextAlignment="false" />
+                    </Item10>
+                    <Item11 Ref="370" ControlType="XRTableCell" Name="tableCell164" Weight="1.1878803910199034" Multiline="true" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="371" UseFont="false" UseTextAlignment="false" />
+                    </Item11>
+                  </Cells>
+                </Item2>
+              </Rows>
+              <StylePriority Ref="372" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="373" ControlType="XRTable" Name="table3" SizeF="508.192352,300" LocationFloat="0,69.81025" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="374" ControlType="XRTableRow" Name="tableRow10" Weight="1">
+                  <Cells>
+                    <Item1 Ref="375" ControlType="XRTableCell" Name="tableCell36" Weight="5.0819235229492188" Multiline="true" Text="C.Catatan Hak Tagih" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" BackColor="LightGray">
+                      <StylePriority Ref="376" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="377" ControlType="XRTableRow" Name="tableRow9" Weight="1">
+                  <Cells>
+                    <Item1 Ref="378" ControlType="XRTableCell" Name="tableCell31" Weight="0.20138870239257811" Multiline="true" Text="1" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="379" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="380" ControlType="XRTableCell" Name="tableCell34" Weight="2.4930552673339843" Multiline="true" Text="LPP s/d pekan ini " TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="381" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="382" ControlType="XRTableCell" Name="tableCell35" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="383" EventName="BeforePrint" PropertyName="Text" Expression="[LPP]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="384" ControlType="XRTableRow" Name="tableRow11" Weight="1">
+                  <Cells>
+                    <Item1 Ref="385" ControlType="XRTableCell" Name="tableCell37" Weight="0.20138870239257811" RowSpan="4" Multiline="true" Text="2" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="386" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="387" ControlType="XRTableCell" Name="tableCell38" Weight="2.4930552673339843" Multiline="true" Text="Fisik yg sudah cair : " TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="388" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="389" ControlType="XRTableCell" Name="tableCell39" Weight="2.387479553222656" Multiline="true" />
+                  </Cells>
+                </Item3>
+                <Item4 Ref="390" ControlType="XRTableRow" Name="tableRow12" Weight="1">
+                  <Cells>
+                    <Item1 Ref="391" ControlType="XRTableCell" Name="tableCell32" Weight="0.20138870239257811" Multiline="true" />
+                    <Item2 Ref="392" ControlType="XRTableCell" Name="tableCell33" Weight="2.4930552673339843" Multiline="true" Text="  a.Tagihan Termin" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="393" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="394" ControlType="XRTableCell" Name="tableCell40" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="395" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Bersih_Cair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item4>
+                <Item5 Ref="396" ControlType="XRTableRow" Name="tableRow13" Weight="1">
+                  <Cells>
+                    <Item1 Ref="397" ControlType="XRTableCell" Name="tableCell41" Weight="0.20138870239257811" Multiline="true" />
+                    <Item2 Ref="398" ControlType="XRTableCell" Name="tableCell42" Weight="2.4930552673339843" Multiline="true" Text="  b. Angsuran Uang Muka &#xD;&#xA;" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="399" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="400" ControlType="XRTableCell" Name="tableCell43" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="401" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_UM_Cair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item5>
+                <Item6 Ref="402" ControlType="XRTableRow" Name="tableRow14" Weight="1">
+                  <Cells>
+                    <Item1 Ref="403" ControlType="XRTableCell" Name="tableCell44" Weight="0.20138870239257811" Multiline="true" />
+                    <Item2 Ref="404" ControlType="XRTableCell" Name="tableCell45" Weight="2.4930552673339843" Multiline="true" Text="  c. Angsuran Retensi" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="405" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="406" ControlType="XRTableCell" Name="tableCell46" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="407" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_Retensi_Cair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item6>
+                <Item7 Ref="408" ControlType="XRTableRow" Name="tableRow15" Weight="1">
+                  <Cells>
+                    <Item1 Ref="409" ControlType="XRTableCell" Name="tableCell47" Weight="0.20138870239257811" Multiline="true" Text="3" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="410" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="411" ControlType="XRTableCell" Name="tableCell48" Weight="2.4930552673339843" Multiline="true" Text="HAK TAGIH (WIP 1 &amp; 2)" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="412" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="413" ControlType="XRTableCell" Name="tableCell49" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="414" EventName="BeforePrint" PropertyName="Text" Expression="Abs([LPP])-(([Jumlah_Bersih_Cair]-[PPN_Data_Kontrak])+[Potongan_UM_Cair]+[Potongan_Retensi_Cair])" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item7>
+                <Item8 Ref="415" ControlType="XRTableRow" Name="tableRow19" Weight="1">
+                  <Cells>
+                    <Item1 Ref="416" ControlType="XRTableCell" Name="tableCell59" Weight="0.20138870239257811" RowSpan="4" Multiline="true" Text="4" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="417" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="418" ControlType="XRTableCell" Name="tableCell60" Weight="2.4930552673339843" Multiline="true" Text="TAGIHAN SAAT INI ( - PPN ) / WIP I :" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="419" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="420" ControlType="XRTableCell" Name="tableCell61" Weight="2.387479553222656" Multiline="true" />
+                  </Cells>
+                </Item8>
+                <Item9 Ref="421" ControlType="XRTableRow" Name="tableRow20" Weight="1">
+                  <Cells>
+                    <Item1 Ref="422" ControlType="XRTableCell" Name="tableCell62" Weight="0.20138870239257811" Multiline="true" Text="tableCell62" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="423" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="424" ControlType="XRTableCell" Name="tableCell63" Weight="2.4930552673339843" Multiline="true" Text="  a. Tagihan Termin" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="425" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="426" ControlType="XRTableCell" Name="tableCell64" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="427" EventName="BeforePrint" PropertyName="Text" Expression="[Jumlah_Bersih_NonCair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item9>
+                <Item10 Ref="428" ControlType="XRTableRow" Name="tableRow34" Weight="1">
+                  <Cells>
+                    <Item1 Ref="429" ControlType="XRTableCell" Name="tableCell125" Weight="0.20138870239257811" Multiline="true" Text="tableCell125" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="430" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="431" ControlType="XRTableCell" Name="tableCell126" Weight="2.4930552673339843" Multiline="true" Text="  b. Angsuran Uang Muka" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="432" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="433" ControlType="XRTableCell" Name="tableCell127" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="434" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_UM_Noncair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item10>
+                <Item11 Ref="435" ControlType="XRTableRow" Name="tableRow35" Weight="1">
+                  <Cells>
+                    <Item1 Ref="436" ControlType="XRTableCell" Name="tableCell129" Weight="0.20138870239257811" Multiline="true" Text="tableCell129" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="437" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="438" ControlType="XRTableCell" Name="tableCell130" Weight="2.4930552673339843" Multiline="true" Text="  c. Angsuran Retensi" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="439" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="440" ControlType="XRTableCell" Name="tableCell131" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="441" EventName="BeforePrint" PropertyName="Text" Expression="[Potongan_Retensi_Noncair]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item11>
+                <Item12 Ref="442" ControlType="XRTableRow" Name="tableRow36" Weight="1">
+                  <Cells>
+                    <Item1 Ref="443" ControlType="XRTableCell" Name="tableCell132" Weight="0.20138870239257811" Multiline="true" Text="5" TextAlignment="MiddleCenter" Font="Arial, 8pt">
+                      <StylePriority Ref="444" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="445" ControlType="XRTableCell" Name="tableCell133" Weight="2.4930552673339843" Multiline="true" Text="SISA HAK TAGIH / WIP II" TextAlignment="MiddleLeft" Font="Arial, 8pt">
+                      <StylePriority Ref="446" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="447" ControlType="XRTableCell" Name="tableCell134" Weight="2.387479553222656" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="448" EventName="BeforePrint" PropertyName="Text" Expression="Abs((Abs([LPP])-(([Jumlah_Bersih_Cair]-[PPN_Data_Kontrak])+[Potongan_UM_Cair]+[Potongan_Retensi_Cair])&#xA;))-([Jumlah_Bersih_Cair]+[Potongan_UM_Noncair]+[Potongan_Retensi_Noncair])" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item12>
+              </Rows>
+              <StylePriority Ref="449" UseBorders="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item10>
+    <Item11 Ref="450" ControlType="DetailReportBand" Name="DetailReport6" Level="0" DataMember="rpt_ar_kartupiutang" DataSource="#Ref-15">
+      <Bands>
+        <Item1 Ref="451" ControlType="DetailBand" Name="Detail7" Expanded="false" HeightF="0.03068712" />
+        <Item2 Ref="452" ControlType="GroupHeaderBand" Name="GroupHeader4" HeightF="135.000015">
+          <Controls>
+            <Item1 Ref="453" ControlType="XRTable" Name="table1" SizeF="508.192383,125" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="454" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="455" ControlType="XRTableCell" Name="tableCell1" Weight="1.1185715484619141" Multiline="true" Text="Nama Owner" TextAlignment="MiddleLeft" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="456" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="457" ControlType="XRTableCell" Name="tableCell2" Weight="0.11059494018554686" Multiline="true" Text=":" />
+                    <Item3 Ref="458" ControlType="XRTableCell" Name="tableCell3" Weight="3.85275733947754" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="459" EventName="BeforePrint" PropertyName="Text" Expression="[Nama owner]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="460" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="461" ControlType="XRTableCell" Name="tableCell10" Weight="1.1185715484619141" Multiline="true" Text="Alamat Owner" TextAlignment="MiddleLeft" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="462" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="463" ControlType="XRTableCell" Name="tableCell11" Weight="0.11059494018554686" Multiline="true" Text=":" />
+                    <Item3 Ref="464" ControlType="XRTableCell" Name="tableCell12" Weight="3.85275733947754" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="465" EventName="BeforePrint" PropertyName="Text" Expression="[Alamat Owner]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="466" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="467" ControlType="XRTableCell" Name="tableCell7" Weight="1.1185715484619141" Multiline="true" Text="Sumber Dana" TextAlignment="MiddleLeft" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="468" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="469" ControlType="XRTableCell" Name="tableCell8" Weight="0.11059494018554686" Multiline="true" Text=":" />
+                    <Item3 Ref="470" ControlType="XRTableCell" Name="tableCell9" Weight="3.85275733947754" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="471" EventName="BeforePrint" PropertyName="Text" Expression="[Sumber Dana]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item3>
+                <Item4 Ref="472" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="473" ControlType="XRTableCell" Name="tableCell4" Weight="1.1185715484619141" Multiline="true" Text="Waktu Pelaksana" TextAlignment="MiddleLeft" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="474" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="475" ControlType="XRTableCell" Name="tableCell5" Weight="0.11059494018554686" Multiline="true" Text=":" />
+                    <Item3 Ref="476" ControlType="XRTableCell" Name="tableCell6" Weight="3.85275733947754" TextFormatString="{0:dd/MM/yyyy}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="477" EventName="BeforePrint" PropertyName="Text" Expression="FormatString('{0:dd/MM/yyyy}',[start_dt]) + ' Sd ' + FormatString('{0:dd/MM /yyyy}',[end_dt])" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item4>
+                <Item5 Ref="478" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                  <Cells>
+                    <Item1 Ref="479" ControlType="XRTableCell" Name="tableCell13" Weight="1.1185715484619141" Multiline="true" Text="Waktu Pemel" TextAlignment="MiddleLeft" Font="Arial, 8pt, style=Bold">
+                      <StylePriority Ref="480" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="481" ControlType="XRTableCell" Name="tableCell14" Weight="0.11059494018554686" Multiline="true" Text=":" />
+                    <Item3 Ref="482" ControlType="XRTableCell" Name="tableCell15" Weight="3.85275733947754" TextFormatString="{0:dd/MM/yyyy}" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="483" EventName="BeforePrint" PropertyName="Text" Expression="[Maint_days]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item5>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item11>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="484" Name="Style1" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="15" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9Ik1haW5EYXRhYmFzZSIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU3RvcmVkUHJvY1F1ZXJ5IiBOYW1lPSJycHRfYXJfa2FydHVwaXV0YW5nIj48UGFyYW1ldGVyIE5hbWU9IkByZXRfY29udHJhY3Rfbm8iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2NvbnRyYWN0X25vKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQHJldF9xdWVyeSIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKDEpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPnJwdF9hcl9rYXJ0dXBpdXRhbmc8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0icnB0X2FyX2thcnR1cGl1dGFuZyI+PEZpZWxkIE5hbWU9ImNvbnRyYWN0b3JfaWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTmFtYSBvd25lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGFtYXQgT3duZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3VtYmVyIERhbmEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVEVSTVlOS0UiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGFuZ2dhbF9CYXAiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSIlIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iS0FSWUFZREYiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlBvdG9uZ2FuX1VNIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJQb3Rvbmdhbl9SZXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ikp1bWxhaF9CZXJzaWgiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlBQTl8yMDA1IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJKdW1sYWggSW5jIFBQTiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUFBIX0ZpbmFsIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJKdW1sYWggRGkgVGVyaW1hIFBQTiAmYW1wOyBQUEgiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9InN0YXR1cyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0ic3RhcnRfZHQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJlbmRfZHQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJNYWludF9kYXlzIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iY29udHJhY3RfYW10IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+    <Item2 Ref="294" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.1" Name="sqlDataSource2" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxDb25uZWN0aW9uIE5hbWU9Ik1haW5EYXRhYmFzZSIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU3RvcmVkUHJvY1F1ZXJ5IiBOYW1lPSJycHRfYXJfa2FydHVwaXV0YW5nIj48UGFyYW1ldGVyIE5hbWU9IkByZXRfY29udHJhY3Rfbm8iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2NvbnRyYWN0X25vKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQHJldF9xdWVyeSIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKDIpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPnJwdF9hcl9rYXJ0dXBpdXRhbmc8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMiI+PFZpZXcgTmFtZT0icnB0X2FyX2thcnR1cGl1dGFuZyI+PEZpZWxkIE5hbWU9InByb2dyZXNzX2RhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF9hbXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkFrdW11bGFzaSIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+    <Item3 Ref="229" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.1" Name="sqlDataSource3" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTMiPjxDb25uZWN0aW9uIE5hbWU9Ik1haW5EYXRhYmFzZSIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU3RvcmVkUHJvY1F1ZXJ5IiBOYW1lPSJycHRfYXJfa2FydHVwaXV0YW5nIj48UGFyYW1ldGVyIE5hbWU9IkByZXRfY29udHJhY3Rfbm8iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2NvbnRyYWN0X25vKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQHJldF9xdWVyeSIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKDMpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPnJwdF9hcl9rYXJ0dXBpdXRhbmc8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMyI+PFZpZXcgTmFtZT0icnB0X2FyX2thcnR1cGl1dGFuZyI+PEZpZWxkIE5hbWU9IlVyYWlhbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF9ubyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzdGFydF9kdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9ImNvbnRyYWN0X2FtdCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUFBOIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJOS19QUE4iIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+    <Item4 Ref="332" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v21.1" Name="sqlDataSource4" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTQiPjxDb25uZWN0aW9uIE5hbWU9Ik1haW5EYXRhYmFzZSIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU3RvcmVkUHJvY1F1ZXJ5IiBOYW1lPSJycHRfYXJfa2FydHVwaXV0YW5nIj48UGFyYW1ldGVyIE5hbWU9IkByZXRfY29udHJhY3Rfbm8iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2NvbnRyYWN0X25vKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQHJldF9xdWVyeSIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKDQpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPnJwdF9hcl9rYXJ0dXBpdXRhbmc8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlNCI+PFZpZXcgTmFtZT0icnB0X2FyX2thcnR1cGl1dGFuZyI+PEZpZWxkIE5hbWU9IkxQUCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUFBOX0RhdGFfS29udHJhayIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iSnVtbGFoX0JlcnNpaF9DYWlyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJQb3Rvbmdhbl9VTV9DYWlyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJQb3Rvbmdhbl9SZXRlbnNpX0NhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkthcnlhWURGX0NhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlBQTl9GaW5hbF9DYWlyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJKdW1sYWhfSW5jRmluYWxfQ2FpciIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUFBIX0ZpbmFsX0NhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ikp1bWxhaF9EaXRlcmltYV9DYWlyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJKdW1sYWhfQmVyc2loX05vbkNhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlBvdG9uZ2FuX1VNX05vbmNhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlBvdG9uZ2FuX1JldGVuc2lfTm9uY2FpciIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iS2FyeWFZREZfTm9uQ2FpciIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUFBOX0ZpbmFsX05vbkNhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ikp1bWxhaF9JbmNGaW5hbF9Ob25DYWlyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJQUEhfRmluYWxfTm9uQ2FpciIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iSnVtbGFoX0RpdGVyaW1hX05vbkNhaXIiIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>
